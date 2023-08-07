@@ -28,9 +28,11 @@
             <input type="text" id="fname" name="fname"><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname"><br>
+            <label for="lname">Enrollment number</label><br>
+            <input type="text" id="lname" name="lname"><br>
         </fieldset>
     </form>
-
+    <h1><center>Answer the following questions</h1></center>
     <ul class="quiz" style="background-color: #c65e5e; padding: 30px;">
         <li>
             <h4>How many letters are there in "JS"?</h4>
@@ -66,23 +68,20 @@
                 </li>
             </ul>
         </li>
-        <li>
-            <h4>How many letters are there in "A"?</h4>
-            <ul class="choices">
-                <li>
-                    <label><input type="radio" name="question2" value="A">2</label>
-                </li>
-                <li>
-                    <label><input type="radio" name="question2" value="B">1</label>
-                </li>
-                <li>
-                    <label><input type="radio" name="question2" value="C">3</label>
-                </li>
-                <li>
-                    <label><input type="radio" name="question2" value="D">4</label>
-                </li>
-            </ul>
-        </li>
+
+        <li><h4>What is your name?</h4>
+  <input type="text" id="name" name="name"></li>
+  <li><h4>What is your name?</h4>
+    <input type="text" id="name" name="name"></li>
+    <li><form action="/upload-file" method="post">
+        <label for="file">Upload an image or PDF</label>
+        <br/>
+        <input type="file" name="file" id="file" accept="image/png, image/jpeg, application/pdf">
+        
+        <input type="submit" value="Upload">
+      </form>
+      </li>
+        
     </ul>
     <button class="view-results" onclick="returnScore()" style="background-color: #007bff; color: #ffffff; padding: 10px;">View Results</button>
     <span id="myresults" class="my-results" style="display: block; margin-top: 10px; padding: 10px; background-color: #ffcc66; color: #ffffff;">My results will appear here</span>
