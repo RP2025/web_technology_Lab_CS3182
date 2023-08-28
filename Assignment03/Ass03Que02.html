@@ -1,6 +1,11 @@
-<html lang>
+<!DOCTYPE html>
+<html>
 <head>
-<title>Login Page</title>
+  <title>My HTML Page</title>
+  <script src="print.js"></script>
+</head>
+
+
 <style>
   body {
     margin: 0;
@@ -39,16 +44,14 @@
             <label for="email" style="display: block; margin-bottom: 5px; color: #666666; font-size: 14px;">Email ID</label>
             <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #cccccc; border-radius: 5px; font-size: 14px; color: #333333;">
           </div>
-      <button style="margin-right: 30px; background-color: #F1BAE2; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;" type="submit">
+      <button style="background-color: #F1BAE2; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;" type="submit">
         <a href="Assigment01.html" >
         Login
     </a>
-    <button style="background-color: #F1BAE2; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;" type="submit">
-      <a href="login2dark.html" >
-      Switch theme
-  </a>
         </button>
-    </form>
+    </form>  
+    <button onclick="printPage()">Print Page</button> 
   </div>
+
 </body>
 </html>
