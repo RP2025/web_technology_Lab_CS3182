@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #222; /* Dark background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background-color: #333; /* Darker background for the container */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #eee; /* Lighter text color */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #aaa; /* Lighter label color */
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555; /* Darker border color */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #eee; /* Lighter text color */
+    background-color: #444; /* Darker input background */
+  }
+
+  button {
+    background-color: #F1BAE2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  button:hover {
+    background-color: #E98CB5; /* Darker hover background color */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome Back!</h2>
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="roll-number">Roll Number</label>
+        <input type="text" id="roll-number" name="roll-number" required>
+      </div>
+      <div>
+        <label for="semester">Semester</label>
+        <input type="text" id="semester" name="semester" required>
+      </div>
+      <div>
+        <label for="cgpa">CGPA</label>
+        <input type="text" id="cgpa" name="cgpa" required>
+      </div>
+      <div>
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit">
+        <a href="Assigment01.html">Login</a>
+      </button>
+    </form>
+  </div>
+</body>
+</html>

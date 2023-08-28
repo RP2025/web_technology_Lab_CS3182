@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Setup - Word Processor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('bg2.gif') no-repeat;
+      background-size:cover ;
+      color: #444;
+      background-color: #f2f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    #container {
+      width: 400px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #444;
+    }
+    label {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #555;
+      display: block;
+    }
+    select, input[type="number"] {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .theme {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .theme label {
+      margin-right: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .theme input[type="radio"] {
+      display: none;
+    }
+    .theme span {
+      display: inline-block;
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .theme input[type="radio"]:checked + span {
+      color: #007bff;
+      font-weight: bold;
+    }
+    /* Themes */
+    .theme-1 {
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    .theme-2 {
+      background-color: #f5f7f9;
+      color: #555;
+    }
+    .theme-3 {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Customize Page Setup</h1>
+    <label for="fontSelect">Select Font:</label>
+    <select id="fontSelect">
+      <option>Arial</option>
+      <option>Times New Roman</option>
+      <option>Verdana</option>
+    </select>
+    
+    <label for="pageSizeSelect">Select Paper Size:</label>
+    <select id="pageSizeSelect">
+      <option>Letter</option>
+      <option>A4</option>
+      <option>Legal</option>
+    </select>
+    
+    <label for="orientationSelect">Select Orientation:</label>
+    <select id="orientationSelect">
+      <option>Portrait</option>
+      <option>Landscape</option>
+    </select>
+    
+    <label for="marginInput">Set Margins (in inches):</label>
+    <input type="number" id="marginInput" step="0.25" min="0" max="2" value="1">
+    
+    <div class="theme">
+      <label>Choose Theme:</label>
+      <input type="radio" name="theme" id="theme1" class="theme-1">
+      <span for="theme1">Theme 1</span>
+      <input type="radio" name="theme" id="theme2" class="theme-2">
+      <span for="theme2">Theme 2</span>
+      <input type="radio" name="theme" id="theme3" class="theme-3">
+      <span for="theme3">Theme 3</span>
+    </div>
+  </div>
+</body>
+</html>
