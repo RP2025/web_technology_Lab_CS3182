@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <style>
+        body {
+          margin: 30;
+          padding: 30;
+          font-family: Arial, sans-serif;
+          background: url('backgroundLogin.jpg') no-repeat;
+          background-size: cover;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0;  ">
+    <center>
+    <h1>Faculty Profile</h1>
+    <input type="text" id="facultyName" placeholder="Enter Faculty Name">
+    <button onclick="displayProfile()">Display Profile</button>
+    <div id="profileContainer" style="background-color:  #ffffff90; border-radius: 10px; box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); padding: 40px; width: 600px; text-align: center;">
+
+    </div>
+
+    <script>
+        // Sample faculty profiles - Replace with your own data
+        const facultyProfiles = {
+            
+            "Dr. Abhik Mukherjee": {
+                name: "Dr. Abhik Mukherjee",
+                photograph: "AM.jpeg",
+                email: "abhik@cs.iiests.ac.in",
+                highestQualification: "Associate Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            },
+            "Dr. Apurba Sarkar": {
+                name: "Dr. Apurba Sarkar",
+                photograph: "AS.jpg",
+                email: "apurba@cs.iiests.ac.in",
+                highestQualification: "Head & Associate Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            },
+            "Dr. Ashish Kumar Layek": {
+                name: "Dr. Ashish Kumar Layek",
+                photograph: "AKL.jpg",
+                email: "ashish@cs.iiests.ac.in",
+                highestQualification: "Assistant Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            },
+            "Dr. Asit Kumar Das": {
+                name: "Dr. Asit Kumar Das",
+                photograph: "AKD.png",
+                email: "akdas@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "dasasitkumar@gmail.com",
+            },
+            "Dr. Biplab K. Sikdar": {
+                name: "Dr. Biplab K. Sikdar",
+                photograph: "BKS.jpg",
+                email: "biplab@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            },
+            "Dr. Jaya Sil": {
+                name: "Dr. Jaya Sil",
+                photograph: "JS.jpeg",
+                email: "js@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "jayaiiests@gmail.com",
+            },
+            "Dr. Malay Kule": {
+                name: "Dr. Malay Kule",
+                photograph: "MK.jpg",
+                email: "malay@cs.iiests.ac.in",
+                highestQualification: "Assistant Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "malay.cs@faculty.iiests.ac.in",
+            },
+            "Dr. Manas Hira": {
+                name: "Dr. Manas Hira",
+                photograph: "MH.jpg",
+                email: "manas@cs.iiests.ac.in",
+                highestQualification: "Associate Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "manas.cs@faculty.iiests.ac.in",
+            },
+            "Dr. Nirnay Ghosh": {
+                name: "Dr. Nirnay Ghosh",
+                photograph: "NG.jpg",
+                email: "nirnay@cs.iiests.ac.in",
+                highestQualification: "Assistant Professor GR-II",
+                subjectsTeaching: "Not specified",
+                researchAreas: "nirnay.cs@faculty.iiests.ac.in",
+            },
+            "Dr. Samit Biswas": {
+                name: "Dr. Samit Biswas",
+                photograph: "SB.jpg",
+                email: "samit@cs.iiests.ac.in",
+                highestQualification: "Assistant Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "samitbiet@gmail.com",
+            },
+            "Dr. Sekhar Mandal": {
+                name: "Dr. Sekhar Mandal",
+                photograph: "SM.jpg",
+                email: "sekhar@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            },
+            "Dr. Sipra Das Bit": {
+                name: "Dr. Sipra Das Bit",
+                photograph: "SDB.jpg",
+                email: "sb@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "sdasbit@yahoo.co.in",
+            },
+            "Dr. Somnath Pal": {
+                name: "Dr. Somnath Pal",
+                photograph: "SP.jpg",
+                email: "sp@cs.iiests.ac.in",
+                highestQualification: "Associate Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "sp@cs.becs.ac.in",
+            },
+            "Dr. Sulata Mitra": {
+                name: "Dr. Sulata Mitra",
+                photograph: "SuM.jpg",
+                email: "sulata@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            },
+            "Dr. Surajeet Ghosh": {
+                name: "Dr. Surajeet Ghosh",
+                photograph: "SG.png",
+                email: "surajeet@cs.iiests.ac.in",
+                highestQualification: "Associate Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "ghoshsurajeet@yahoo.com",
+            },
+            "Dr. Susanta Chakraborty": {
+                name: "Dr. Susanta Chakraborty",
+                photograph: "SC.jpg",
+                email: "sc@cs.iiests.ac.in",
+                highestQualification: "Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "susanta.chak@gmail.com",
+            },
+            "Dr. Tamal Pal": {
+                name: "Dr. Tamal Pal",
+                photograph: "TP.jpg",
+                email: "tamal@cs.iiests.ac.in",
+                highestQualification: "Assistant Professor",
+                subjectsTeaching: "Not specified",
+                researchAreas: "Not specified",
+            }
+            // Add more profiles as needed
+        };
+
+        function displayProfile() {
+            const facultyName = document.getElementById("facultyName").value;
+            const profileContainer = document.getElementById("profileContainer");
+            
+            // Check if the entered faculty name exists in the profiles
+            if (facultyProfiles.hasOwnProperty(facultyName)) {
+                const faculty = facultyProfiles[facultyName];
+                profileContainer.innerHTML = `
+                    <h2>Name: ${faculty.name}</h2>
+                    <img src="${faculty.photograph}" alt="${faculty.name}'s Photo" style="max-width: 200px;">
+                    <p>Email: ${faculty.email}</p>
+                    <p>Highest Qualification: ${faculty.highestQualification}</p>
+                    <p>Subjects Teaching: ${faculty.subjectsTeaching}</p>
+                    <p>Research Areas: ${faculty.researchAreas}</p>
+                `;
+            } else {
+                profileContainer.innerHTML = "<p>Faculty not found.</p>";
+            }
+        }
+    </script>
+</center>
+<footer>
+    <center>
+    <body style="font-family: Arial, sans-serif; background-color: #f0f0f0;  ">
+      <div style="background-color:  #ffffff90; border-radius: 10px; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); padding: 40px; width: 600px; text-align: center;">
+        <p>Assignment 1<br>
+        <p>Created by: Raksha Pahariya<br>
+      <a href="mailto:rakshapahariya1208@gmail.com">rakshapahariya1208@gmail.com</a></p>
+      <a href="feedback.html">FEEDBACK BLOG</a>
+        </center>
+    </footer>
+</body>
+</html>

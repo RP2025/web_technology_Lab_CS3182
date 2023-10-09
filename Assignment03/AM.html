@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <!-- Faculty Photograph -->
+            <img src="AM.jpeg" alt="Faculty Photograph">
+        </div>
+        <div>
+            <!-- Faculty Name -->
+            <h1 class="faculty-name">Dr. Abhik Mukherjee</h1>
+            
+            <!-- Input field for faculty name -->
+            <input type="text" id="faculty-name-input" placeholder="Enter Faculty Name">
+            <button onclick="displayProfile()">Display Profile</button>
+
+            <!-- Faculty Email -->
+            <p class="faculty-email">Email: abhik@cs.iiests.ac.in</p>
+
+            <!-- Faculty Highest Qualification -->
+            <p class="faculty-qualification">Highest Qualification: Ph.D. Computer Science Department, BESU Shibpur in 2003.</p>
+
+            <!-- Research Areas -->
+            <h2 class="research-areas">Research Areas:</h2>
+            <ul>
+                <li>Estimation theory for Meteorology</li>
+                <li>Estimation Theory for Navigation and Control Applications</li>
+                <li>Information systems and related algorithm</li>
+                <li>Estimation and Control applied to Systems Biology</li>
+                <li>Online social media analysis</li>
+                <li>Control applications for energy systems</li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Assignment 1</p>
+            <p>Created by: Raksha Pahariya</p>
+            <p><a href="mailto:rakshapahariya1208@gmail.com">rakshapahariya1208@gmail.com</a></p>
+            <p><a href="feedback.html">FEEDBACK BLOG</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript function to display the faculty profile
+        function displayProfile() {
+            // Get the input value (faculty name)
+            var facultyName = document.getElementById("faculty-name-input").value;
+
+            // Update the faculty name in the profile
+            document.querySelector(".faculty-name").textContent = facultyName;
+        }
+    </script>
+</body>
+</html>
