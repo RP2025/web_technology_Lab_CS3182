@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Animal Images</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('BackgroundLogin.jpg') no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+<body>
+    <h2>Display Animal Images</h2>
+    <form action="display_animals.php" method="post">
+        <label for="numberOfImages">Enter the number of images (N):</label>
+        <input type="number" name="numberOfImages" id="numberOfImages" required>
+        <input type="submit" value="Display Images">
+    </form>
+</body>
+</html>
