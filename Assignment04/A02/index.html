@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client-Side Grade Calculator</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('BackgroundLogin.jpg') no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+<body>
+    <p>Grade Calculator</p>
+    <form method="post" action="grade_calculation.php">
+        <label for="marksInput">Enter marks: </label>
+        <input type="number" name="marks" id="marksInput">
+        <button type="submit">Calculate Grade</button>
+    </form>
+</body>
+</html>
