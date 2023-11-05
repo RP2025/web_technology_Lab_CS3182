@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client-Side Odd Number Display</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('BackgroundLogin.jpg') no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+<body>
+    <p>Odd Number Display</p>
+    <form method="post" action="display_odd_numbers.php">
+        <label for="numberInput">Enter a number (N): </label>
+        <input type="number" name="n" id="numberInput">
+        <button type="submit">Display Odd Numbers</button>
+    </form>
+</body>
+</html>
