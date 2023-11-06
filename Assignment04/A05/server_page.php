@@ -3,19 +3,7 @@
 <head>
     <title>Server Page</title>
 </head>
-<style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('BackgroundLogin.jpg') no-repeat;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-  </style>
+
 <body>
     <h2>Server Page - Form Feedback</h2>
 
